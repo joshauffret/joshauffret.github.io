@@ -3,7 +3,7 @@
   <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Josh Auffret - Portfolio</title>
+        <title>Josh Auffret - Creative Production Executive</title>
       <style>
                 * {
                               margin: 0;
@@ -15,33 +15,54 @@
                               font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                               line-height: 1.6;
                               color: #333;
-                              background-color: #f4f4f4;
+                              background-color: #f9f9f9;
                 }
 
                 header {
-                              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                              background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
                               color: white;
                               padding: 60px 20px;
                               text-align: center;
+                              box-shadow: 0 4px 6px rgba(0,0,0,0.1);
                 }
 
                 header h1 {
                               font-size: 3em;
                               margin-bottom: 10px;
+                              font-weight: 700;
                 }
 
-                header p {
-                              font-size: 1.2em;
-                              margin-bottom: 20px;
+                header .subtitle {
+                              font-size: 1.3em;
+                              margin-bottom: 15px;
+                              font-weight: 300;
+                              letter-spacing: 1px;
+                }
+
+                header .contact {
+                              font-size: 0.95em;
+                              margin-top: 15px;
+                              opacity: 0.95;
+                }
+
+                header a {
+                              color: #fff;
+                              text-decoration: none;
+                              margin: 0 10px;
+                }
+
+                header a:hover {
+                              text-decoration: underline;
                 }
 
                 nav {
-                              background-color: #333;
-                              padding: 10px 0;
+                              background-color: #1a1a1a;
+                              padding: 12px 0;
                               text-align: center;
                               position: sticky;
                               top: 0;
                               z-index: 100;
+                              box-shadow: 0 2px 4px rgba(0,0,0,0.1);
                 }
 
                 nav a {
@@ -50,113 +71,299 @@
                               padding: 10px 20px;
                               display: inline-block;
                               transition: background-color 0.3s;
+                              font-weight: 500;
                 }
 
                 nav a:hover {
-                              background-color: #667eea;
+                              background-color: #2a5298;
                 }
 
                 .container {
                               max-width: 1000px;
-                              margin: 40px auto;
+                              margin: 0 auto;
                               padding: 0 20px;
                 }
 
                 section {
                               background: white;
-                              padding: 30px;
-                              margin: 20px 0;
+                              padding: 40px;
+                              margin: 30px 0;
                               border-radius: 8px;
-                              box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                              box-shadow: 0 2px 8px rgba(0,0,0,0.08);
                 }
 
                 section h2 {
-                              color: #667eea;
-                              margin-bottom: 20px;
-                              border-bottom: 2px solid #667eea;
-                              padding-bottom: 10px;
+                              color: #1e3c72;
+                              margin-bottom: 25px;
+                              font-size: 1.8em;
+                              border-bottom: 3px solid #2a5298;
+                              padding-bottom: 12px;
                 }
 
-                .about-text {
-                              line-height: 1.8;
-                              color: #555;
+                section h3 {
+                              color: #2a5298;
+                              margin-top: 20px;
+                              margin-bottom: 10px;
+                              font-size: 1.2em;
+                }
+
+                .job-entry {
+                              margin-bottom: 25px;
+                              padding-bottom: 20px;
+                              border-bottom: 1px solid #eee;
+                }
+
+                .job-entry:last-child {
+                              border-bottom: none;
+                }
+
+                .job-title {
+                              font-weight: 700;
+                              color: #1e3c72;
+                              font-size: 1.1em;
+                }
+
+                .company {
+                              color: #2a5298;
+                              font-weight: 600;
+                              margin-right: 10px;
+                }
+
+                .date {
+                              color: #666;
+                              font-size: 0.95em;
+                              font-style: italic;
+                }
+
+                .location {
+                              color: #777;
+                              font-size: 0.95em;
+                }
+
+                .summary-list {
+                              list-style: none;
+                              margin-left: 0;
+                }
+
+                .summary-list li {
+                              padding: 8px 0;
+                              padding-left: 25px;
+                              position: relative;
+                }
+
+                .summary-list li:before {
+                              content: "▸";
+                              position: absolute;
+                              left: 0;
+                              color: #2a5298;
+                              font-weight: bold;
+                }
+
+                .skills-grid {
+                              display: grid;
+                              grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                              gap: 20px;
+                              margin-top: 20px;
+                }
+
+                .skill-item {
+                              background: #f9f9f9;
+                              padding: 15px;
+                              border-left: 4px solid #2a5298;
+                              border-radius: 4px;
+                }
+
+                .skill-item strong {
+                              color: #1e3c72;
+                              display: block;
+                              margin-bottom: 8px;
                 }
 
                 footer {
-                              background-color: #333;
+                              background-color: #1a1a1a;
                               color: white;
                               text-align: center;
-                              padding: 20px;
+                              padding: 25px;
                               margin-top: 40px;
+                }
+
+                footer a {
+                              color: #2a5298;
+                              text-decoration: none;
+                }
+
+                footer a:hover {
+                              text-decoration: underline;
                 }
             </style>
   </head>
   <body>
         <header>
                   <h1>Josh Auffret</h1>
-                <p>Portfolio & Resume</p>
+                <p class="subtitle">Global Creative Production Executive</p>p>
+                <p class="contact">
+                    <a href="mailto:josh.auffret@gmail.com">josh.auffret@gmail.com</a>a> | 
+                    <a href="tel:818-516-2116">818.516.2116</a>a> | 
+                    <a href="https://www.linkedin.com/in/auffret/" target="_blank">LinkedIn</a>a>
+                </p>p>
         </header>
       
       <nav>
-                <a href="#about">About</a>a>
-                <a href="#resume">Resume</a>a>
-                <a href="#projects">Projects</a>a>
+                <a href="#summary">Summary</a>a>
+                <a href="#experience">Experience</a>a>
+                <a href="#expertise">Expertise</a>a>
+                <a href="#education">Education</a>a>
                 <a href="#contact">Contact</a>a>
       </nav>
 
         <div class="container">
-                  <section id="about">
-                                <h2>About Me</h2>
-                                <p class="about-text">
-                                                  Welcome to my portfolio! I'm a passionate professional committed to creating quality work and continuous learning. 
-                                                  Feel free to explore my resume, projects, and get in touch if you'd like to collaborate.
-                                </p>
-                  </section>section>
+                  <section id="summary">
+                                <h2>Professional Summary</h2>
+                                <p style="font-size: 1.1em; color: #555; margin-bottom: 15px;">
+                                                  Accomplished creative production executive with 25+ years of leadership experience in large-scale creative operations across Google, YouTube, and Disney. Proven expertise in operational transformation, AI-driven workflows, cross-functional leadership, and people management. Specialized in building high-performing teams and driving creative innovation in high-growth tech and media environments.
+                                </p>p>
 
-                  <section id="resume">
-                                <h2>Resume</h2>
-                                <p>
-                                                  <strong>Add your resume content here.</strong> You can include your:
-                                </p>
-                              <ul style="margin-left: 20px; margin-top: 10px;">
-                                              <li>Education background</li>
-                                              <li>Work experience</li>
-                                              <li>Skills and expertise</li>
-                                              <li>Certifications</li>
-                                              <li>Languages</li>
-                              </ul>ul>
-                  </section>section>
-                
-                <section id="projects">
-                            <h2>Projects</h2>
-                            <p>
-                                              <strong>Showcase your projects here.</strong> Add descriptions of your notable work, projects, and achievements.
-                                              You can include links to live projects or GitHub repositories.
-                            </p>
-                </section>section>
-
-                  <section id="contact">
-                                <h2>Contact</h2>
-                                <p>
-                                                  Feel free to reach out to me through your preferred contact method:
-                                </p>
-                                <ul style="margin-left: 20px; margin-top: 10px;">
-                                                  <li>Email: <strong>your.email@example.com</strong></li>
-                                                <li>LinkedIn: <strong>Your LinkedIn Profile</strong></li>
-                                                <li>GitHub: <strong>Your GitHub Profile</strong>strong></li>
+                                <h3>Core Competencies</h3>
+                                <ul class="summary-list">
+                                                  <li><strong>Global Creative Operations</strong> - Leading large-scale production teams and enterprise-wide workflow optimization</li>
+                                                <li><strong>Operational Transformation & AI</strong> - Deploying AI automation tools to streamline creative workflows and drive efficiency</li>
+                                                <li><strong>Cross-Functional Leadership</strong>strong> - Trusted partner to executives, managing complex stakeholder relationships</li>
+                                                <li><strong>People Management</strong> - 20+ years experience building and mentoring high-performing creative teams</li>
                                 </ul>ul>
                   </section>section>
-        </div>div>
+                
+                <section id="experience">
+                            <h2>Professional Experience</h2>
+                            
+                            <div class="job-entry">
+                                            <div class="job-title">Head of UX Program Management & Operations, Core UX</div>div>
+                                            <div><span class="company">Google</span>span> | <span class="location">Durham, NC</span>span> | <span class="date">July 2022 - Present</span>span></div>
+                                            <ul class="summary-list" style="margin-top: 12px;">
+                                                <li>Directed a 15-person UX Programs and Operations team for the VP of Core UX, overseeing end-to-end creative delivery for 300+ enterprise products</li>
+                                                                <li>Established steering committees and enterprise frameworks aligning creative output with executive business goals</li>
+                                                                <li>Architected unified production management system across UX, Product, and Engineering, eliminating creative bottlenecks</li>
+                                                                <li>Led end-to-end production for Core UX brand initiatives and managed corporate narrative strategy</li>
+                                                                <li>Spearheaded the Core UX AI Academy - specialized training curriculum for upskilling creative teams in AI workflows</li>
+                                                                <li>Redesigned production workflows to reduce friction and accelerate speed-to-market for enterprise products</li>
+                                                                <li>Directed strategic 3P vendor partnerships, achieving 85% cost reduction within 6 months</li>
+                                            </ul>ul>
+                            </div>
+                            
+                            <div class="job-entry">
+                                            <div class="job-title">Head of Creative Production & Operations</div>
+                                            <div><span class="company">Google</span>span> | <span class="location">San Francisco, CA</span>span> | <span class="date">October 2017 - June 2022</span>span></div>
+                                            <ul class="summary-list" style="margin-top: 12px;">
+                                                                <li>Led Creative Production & Operations for US Creative Works, building high-impact ad programs for Fortune 500 brands</li>
+                                                                <li>Managed a world-class team of Producers collaborating with Sales, Product, Engineering, and external creative partners</li>
+                                                                <li>Directed launch of first-of-its-kind brand experiences across AR, VR, and AI, including campaigns for Lionsgate's Wonder and Pepsi Go Back</li>
+                                                                <li>Launched video creative accelerator program delivering 150+ YouTube-first campaigns</li>
+                                                                <li>Designed and scaled creative consulting service from zero to 800+ annual engagements</li>
+                                                                <li>Spearheaded development of custom CMS and project management product improving team velocity and data accuracy</li>
+                                                                <li>Managed $20M+ annual production budget with 100% utilization through strategic resource allocation</li>
+                                            </ul>ul>
+                            </div>
+                            
+                            <div class="job-entry">
+                                            <div class="job-title">Head of Interactive Production & Creative Technology<br>Executive Producer</div>
+                                            <div><span class="company">YouTube</span>span> | <span class="location">San Bruno, CA</span>span> | <span class="date">May 2010 - September 2017</span>span></div>
+                                            <ul class="summary-list" style="margin-top: 12px;">
+                                                                <li>Built and led high-performing team of Senior Interactive Producers managing 100+ custom YouTube programs</li>
+                                                                <li>Directed portfolio generating $275M+ in revenue, including campaigns for T-Mobile, Pepsi, Kodak, and Coachella</li>
+                                                                <li>Spearheaded first-ever mobile live stream for YouTube with co-branded partner, establishing new revenue stream</li>
+                                                                <li>Architected Professional Services strategy for $1M+ premium advertiser programs</li>
+                                                                <li>Established Creative Technology discipline, hiring 8 technologists to develop pitch prototypes</li>
+                                                                <li>Operationalized cross-functional engagement models between The Zoo (YouTube's think tank) and Google product teams</li>
+                                            </ul>ul>
+                            </div>
+                            
+                            <div class="job-entry">
+                                            <div class="job-title">Senior Producer & Lead Producer</div>
+                                            <div><span class="company">ABC Family Digital Media | Disney</span>span> | <span class="location">Burbank, CA</span>span> | <span class="date">September 2006 - August 2008</span>span></div>
+                                            <ul class="summary-list" style="margin-top: 12px;">
+                                                                <li>Oversaw staff of 12 lead producers accountable for all ABC Family digital production</li>
+                                                                <li>Oversaw development of standalone web experiences including Kyle XY: The Collective Experience (Emmy nomination)</li>
+                                                                <li>Collaborated with Creative, Product, Technology, and Ad Sales teams on cutting-edge interactive experiences</li>
+                                            </ul>ul>
+                            </div>
+                            
+                            <div class="job-entry">
+                                            <div class="job-title">Senior Producer & Producer</div>
+                                            <div><span class="company">The Walt Disney Internet Group</span>span> | <span class="location">North Hollywood, CA</span>span> | <span class="date">October 2000 - October 2003</span>span></div>
+                            </div>
+                            
+                            <div class="job-entry">
+                                            <div class="job-title">Associate Producer & Production Coordinator</div>
+                                            <div><span class="company">NBC Digital | Paramount Digital Entertainment</span>span> | <span class="location">Los Angeles, CA</span>span> | <span class="date">1995 - 2000</span>span></div>
+                            </div>
+                </section>section>
+                
+                <section id="expertise">
+                            <h2>Core Expertise</h2>
+                            <div class="skills-grid">
+                                            <div class="skill-item">
+                                                                <strong>Global Creative Operations</strong>
+                                                                Large-scale team management, production workflow optimization, cross-regional coordination
+                                            </div>
+                                            <div class="skill-item">
+                                                                <strong>AI-Driven Workflows</strong>
+                                                                AI automation implementation, emerging tech integration, creative tool development
+                                            </div>
+                                            <div class="skill-item">
+                                                                <strong>Managed Services Strategy</strong>
+                                                                Professional services models, vendor management, budget allocation & ROI optimization
+                                            </div>
+                                            <div class="skill-item">
+                                                                <strong>Budget Management</strong>
+                                                                $20M+ annual production budgets, resource allocation, vendor negotiations
+                                            </div>
+                                            <div class="skill-item">
+                                                                <strong>Experiential Production</strong>
+                                                                Multi-platform video, AR/VR/AI experiences, brand activations, event production
+                                            </div>
+                                            <div class="skill-item">
+                                                                <strong>Team Leadership</strong>
+                                                                20+ years building high-performing creative teams, mentorship, organizational development
+                                            </div>
+                                            <div class="skill-item">
+                                                                <strong>UX/Product Development</strong>
+                                                                Product management, CMS development, custom tool development, team training
+                                            </div>
+                                            <div class="skill-item">
+                                                                <strong>Enterprise Collaboration</strong>
+                                                                Executive stakeholder management, cross-functional partnership, strategic alignment
+                                            </div>
+                            </div>
+                </section>section>
+                
+                <section id="education">
+                            <h2>Education</h2>
+                            <div class="job-entry">
+                                            <div class="job-title">Bachelor of Arts in Interactive Entertainment and Multimedia</div>
+                                            <div><span class="company">University of Southern California</span>span> | <span class="location">Los Angeles, CA</span>span> | <span class="date">May 1997</span>span></div>
+                            </div>
+                </section>section>
+                
+                <section id="contact">
+                            <h2>Get In Touch</h2>
+                            <p style="font-size: 1.05em; margin-bottom: 20px;">
+                                I'm always interested in hearing about exciting creative projects and collaborative opportunities.
+                            </p>p>
+                            <ul class="summary-list">
+                                            <li><strong>Email:</strong>strong> <a href="mailto:josh.auffret@gmail.com">josh.auffret@gmail.com</a>a></li>
+                                            <li><strong>Phone:</strong> <a href="tel:818-516-2116">818.516.2116</a>a></li>
+                                            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/auffret/" target="_blank">linkedin.com/in/auffret</a>a></li>
+                            </ul>ul>
+                </section>section>
+        </div>
       
       <footer>
                 <p>&copy; 2026 Josh Auffret. All rights reserved.</p>
+              <p style="margin-top: 10px; font-size: 0.9em;">Designed & built as a personal portfolio site.</p>
       </footer>
   </body>
 </html>html></p>
-      </footer></li></strong></strong></li>
-                                </p>
-                            </p></li></li></strong>
-      </nav></p></h1>
+      </footer></strong></strong></li></li></strong></strong></li></li></div></strong></li></li></strong></strong></li>
+      </nav></h1>
         </header>
   </body>
       </style></title>
