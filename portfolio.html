@@ -1,154 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Josh Auffret - Portfolio</title>
-      <style>
-                * {
-                              margin: 0;
-                              padding: 0;
-                              box-sizing: border-box;
-                }
-
-                body {
-                              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                              line-height: 1.6;
-                              color: #333;
-                              background-color: #f9f9f9;
-                }
-
-                header {
-                              background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-                              color: white;
-                              padding: 60px 20px;
-                              text-align: center;
-                              box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-                }
-
-                header h1 {
-                              font-size: 3em;
-                              margin-bottom: 10px;
-                              font-weight: 700;
-                }
-
-                header .subtitle {
-                              font-size: 1.3em;
-                              margin-bottom: 15px;
-                              font-weight: 300;
-                              letter-spacing: 1px;
-                }
-
-                header .contact {
-                              font-size: 0.95em;
-                              margin-top: 15px;
-                              opacity: 0.95;
-                }
-
-                header a {
-                              color: #fff;
-                              text-decoration: none;
-                              margin: 0 10px;
-                }
-
-                header a:hover {
-                              text-decoration: underline;
-                }
-
-                nav {
-                              background-color: #1a1a1a;
-                              padding: 12px 0;
-                              text-align: center;
-                              position: sticky;
-                              top: 0;
-                              z-index: 100;
-                              box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-                }
-
-                nav a {
-                              color: white;
-                              text-decoration: none;
-                              padding: 10px 20px;
-                              display: inline-block;
-                              transition: background-color 0.3s;
-                              font-weight: 500;
-                }
-
-                nav a:hover, nav a.active {
-                              background-color: #2a5298;
-                }
-
-                .container {
-                              max-width: 1000px;
-                              margin: 0 auto;
-                              padding: 0 20px;
-                }
-
-                section {
-                              background: white;
-                              padding: 40px;
-                              margin: 30px 0;
-                              border-radius: 8px;
-                              box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-                }
-
-                section h2 {
-                              color: #1e3c72;
-                              margin-bottom: 25px;
-                              font-size: 1.8em;
-                              border-bottom: 3px solid #2a5298;
-                              padding-bottom: 12px;
-                }
-
-                footer {
-                              background-color: #1a1a1a;
-                              color: white;
-                              text-align: center;
-                              padding: 25px;
-                              margin-top: 40px;
-                }
-            </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josh Auffret - Portfolio</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.6;color:#333;background-color:#f9f9f9}
+    header{background:linear-gradient(135deg,#1e3c72 0%,#2a5298 100%);color:white;padding:60px 20px;text-align:center;box-shadow:0 4px 6px rgba(0,0,0,.1)}
+    header h1{font-size:3em;margin-bottom:10px;font-weight:700}
+    header .subtitle{font-size:1.3em;margin-bottom:15px;font-weight:300;letter-spacing:1px}
+    header .contact{font-size:.95em;margin-top:15px;opacity:.95}
+    header a{color:#fff;text-decoration:none;margin:0 10px}
+    header a:hover{text-decoration:underline}
+    nav{background-color:#1a1a1a;padding:12px 0;text-align:center;position:sticky;top:0;z-index:100;box-shadow:0 2px 4px rgba(0,0,0,.1)}
+    nav a{color:white;text-decoration:none;padding:10px 20px;display:inline-block;transition:background-color .3s;font-weight:500}
+    nav a:hover,nav a.active{background-color:#2a5298}
+    .container{max-width:1000px;margin:0 auto;padding:0 20px}
+    section{background:white;padding:40px;margin:30px 0;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+    section h2{color:#1e3c72;margin-bottom:25px;font-size:1.8em;border-bottom:3px solid #2a5298;padding-bottom:12px}
+    .carousel-container{position:relative;max-width:800px;margin:0 auto;background:#f5f5f5;border-radius:8px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,.2)}
+    .carousel-slide{display:none;padding:60px 40px;text-align:center;min-height:400px;animation:fadeIn .5s}
+    .carousel-slide.active{display:block}
+    .carousel-slide h3{color:#1e3c72;font-size:1.5em;margin-bottom:15px}
+    .carousel-slide p{color:#666;font-size:1.05em;margin-bottom:20px;line-height:1.8}
+    .carousel-slide .project-date{color:#2a5298;font-weight:600;margin-bottom:10px}
+    .carousel-slide .project-tags{margin-top:20px}
+    .project-tag{display:inline-block;background:#2a5298;color:white;padding:6px 12px;border-radius:20px;margin:5px 5px 5px 0;font-size:.9em}
+    .carousel-controls{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;background:#f9f9f9}
+    .carousel-btn{background:#2a5298;color:white;border:none;padding:10px 25px;border-radius:5px;cursor:pointer;font-size:1em;font-weight:600;transition:background-color .3s}
+    .carousel-btn:hover{background:#1e3c72}
+    .carousel-btn:disabled{background:#ccc;cursor:not-allowed}
+    .carousel-dots{display:flex;gap:10px;justify-content:center}
+    .dot{width:10px;height:10px;border-radius:50%;background:#ccc;cursor:pointer;transition:background-color .3s}
+    .dot.active{background:#2a5298}
+    .slide-counter{color:#666;font-weight:600;min-width:60px;text-align:center}
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+    footer{background-color:#1a1a1a;color:white;text-align:center;padding:25px;margin-top:40px}
+    </style>
   </head>
   <body>
-        <header>
-                  <h1>Josh Auffret</h1>
-                <p class="subtitle">Global Creative Production Executive</p>p>
-                <p class="contact">
-                    <a href="mailto:josh.auffret@gmail.com">josh.auffret@gmail.com</a>a> | 
-                    <a href="tel:818-516-2116">818.516.2116</a>a> | 
-                    <a href="https://www.linkedin.com/in/auffret/" target="_blank">LinkedIn</a>a>
-                </p>p>
-        </header>
-      
-      <nav>
-                <a href="index.html">About</a>a>
-                <a href="resume.html">Resume</a>a>
-                <a href="portfolio.html" class="active">Portfolio</a>a>
-                <a href="contact.html">Contact</a>a>
-      </nav>
+    <header>
+      <h1>Josh Auffret</h1>
+    <p class="subtitle">Global Creative Production Executive</p>p>
+    <p class="contact">
+    <a href="mailto:josh.auffret@gmail.com">josh.auffret@gmail.com</a>a> | 
+    <a href="tel:818-516-2116">818.516.2116</a>a> | 
+    <a href="https://www.linkedin.com/in/auffret/" target="_blank">LinkedIn</a>a>
+    </p>p>
+    </header>
+  
+  <nav>
+    <a href="index.html">About</a>a>
+    <a href="resume.html">Resume</a>a>
+    <a href="portfolio.html" class="active">Portfolio</a>a>
+    <a href="contact.html">Contact</a>a>
+  </nav>
 
-        <div class="container">
-                  <section>
-                                <h2>Portfolio</h2>
-                                <p style="font-size: 1.05em; color: #666;">
-                                                  <strong>Coming Soon - TBD</strong>
-                                </p>p>
-                              <p style="font-size: 1.05em; color: #777; margin-top: 15px;">
-                                  I'm currently curating select projects and case studies that showcase my work across creative operations, brand experiences, and emerging technology initiatives. Check back soon for portfolio details!
-                              </p>p>
-                  </section>
+    <div class="container">
+      <section>
+        <h2>Portfolio & Projects</h2>
+
+        <p style="font-size:1.05em;color:#666;margin-bottom:30px;text-align:center;">
+          Explore my recent projects and creative initiatives. Use the arrows to navigate through my work.
+        </p>p>
+
+        <div class="carousel-container">
+          <div class="carousel-slide active">
+            <h3>Core UX AI Academy</h3>
+            <p class="project-date">2023 - 2024</p>p>
+            <p>Designed and launched a specialized training curriculum to upskill creative teams in AI-powered workflows. This initiative provided hands-on training for 50+ team members across multiple departments on implementing AI tools in production pipelines.</p>
+          <div class="project-tags">
+          <span class="project-tag">AI Training</span>span>
+          <span class="project-tag">Curriculum Design</span>span>
+          <span class="project-tag">Leadership</span>span>
+          </div>div>
+          </div>div>
+        
+        <div class="carousel-slide">
+        <h3>Production Management System</h3>
+        <p class="project-date">2019 - 2022</p>
+        <p>Architected a unified production management system across UX, Product, and Engineering teams. This custom tool eliminated creative bottlenecks and improved team velocity by 40%, reducing project timelines by an average of 2 weeks.</p>
+        <div class="project-tags">
+        <span class="project-tag">Product Strategy</span>span>
+        <span class="project-tag">Systems Design</span>span>
+        <span class="project-tag">Operational Excellence</span>span>
         </div>div>
-      
-      <footer>
-                <p>&copy; 2026 Josh Auffret. All rights reserved.</p>
-              <p style="margin-top: 10px; font-size: 0.9em;">Designed & built as a personal portfolio site.</p>
-      </footer>
+        </div>div>
+        
+        <div class="carousel-slide">
+        <h3>YouTube First Video Campaigns</h3>
+        <p class="project-date">2016 - 2017</p>
+        <p>Led the creative direction and production for 150+ YouTube-first campaigns for major brands including T-Mobile, Pepsi, Kodak, and Coachella. Generated $275M+ in revenue with innovative multi-platform storytelling approaches.</p>
+        <div class="project-tags">
+        <span class="project-tag">Video Production</span>span>
+        <span class="project-tag">Campaign Management</span>span>
+        <span class="project-tag">Creative Strategy</span>span>
+        </div>div>
+        </div>div>
+        
+        <div class="carousel-slide">
+        <h3>Interactive Brand Experiences</h3>
+        <p class="project-date">2014 - 2016</p>
+        <p>Directed development of cutting-edge brand experiences across AR, VR, and immersive technologies. Notable projects include first-of-its-kind mobile live stream and interactive storytelling experiences for major entertainment brands.</p>
+        <div class="project-tags">
+        <span class="project-tag">AR/VR</span>span>
+        <span class="project-tag">Immersive Tech</span>span>
+        <span class="project-tag">Innovation</span>span>
+        </div>div>
+        </div>div>
+        
+        <div class="carousel-slide">
+        <h3>Creative Services Platform</h3>
+        <p class="project-date">2011 - 2014</p>
+        <p>Designed and scaled a creative consulting service from zero to 800+ annual engagements. Developed standardized processes and quality frameworks that became industry best practices for enterprise creative delivery.</p>
+        <div class="project-tags">
+        <span class="project-tag">Service Design</span>span>
+        <span class="project-tag">Scaling</span>span>
+        <span class="project-tag">Process Optimization</span>span>
+        </div>div>
+        </div>div>
+        
+        <div class="carousel-controls">
+        <button class="carousel-btn" id="prevBtn" onclick="changeSlide(-1)">← Previous</button>button>
+        <div class="carousel-dots" id="dotsContainer"></div>div>
+        <button class="carousel-btn" id="nextBtn" onclick="changeSlide(1)">Next →</button>button>
+        </div>div>
+        <div style="text-align:center;margin-top:15px;">
+        <span class="slide-counter"><span id="currentSlide">1</span>span> / <span id="totalSlides">5</span>span></span>span>
+        </div>div>
+        </div>section>
+    </div>
+  
+  <footer>
+    <p>&copy; 2026 Josh Auffret. All rights reserved.</p>p>
+    <p style="margin-top:10px;font-size:.9em;">Designed &amp; built as a personal portfolio site.</p>p>
+  </footer>
+
+    <script>
+      let currentSlide = 0;
+      const slides = document.querySelectorAll('.carousel-slide');
+      const totalSlides = slides.length;
+
+      function showSlide(n) {
+          slides.forEach(slide => slide.classList.remove('active'));
+          const dots = document.querySelectorAll('.dot');
+          dots.forEach(dot => dot.classList.remove('active'));
+
+          slides[n].classList.add('active');
+          dots[n].classList.add('active');
+
+          document.getElementById('currentSlide').textContent = n + 1;
+          document.getElementById('prevBtn').disabled = n === 0;
+          document.getElementById('nextBtn').disabled = n === totalSlides - 1;
+      }
+
+      function changeSlide(direction) {
+          currentSlide += direction;
+          if (currentSlide < 0) currentSlide = 0;
+          if (currentSlide >= totalSlides) currentSlide = totalSlides - 1;
+          showSlide(currentSlide);
+      }
+
+      function createDots() {
+          const dotsContainer = document.getElementById('dotsContainer');
+          for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'dot' + (i === 0 ? ' active' : '');
+                dot.onclick = () => {
+                        currentSlide = i;
+                        showSlide(currentSlide);
+                };
+                dotsContainer.appendChild(dot);
+          }
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+          createDots();
+          showSlide(0);
+      });
+
+      document.addEventListener('keydown', (e) => {
+          if (e.key === 'ArrowLeft') changeSlide(-1);
+          if (e.key === 'ArrowRight') changeSlide(1);
+      });
+    </script>
   </body>
-</html>html></p>
-      </footer></strong>
-                  </section>
-      </nav></h1>
-        </header>
+</html>html>
+    </script>
+  </footer></p></p>
+      </section>
+  </nav></h1>
+    </header>
   </body>
-      </style></title>
+  </style></title>
   </head>
